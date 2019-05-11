@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChetPose</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+<!--     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script> -->
+  </head>
+  <body style="margin-left:60px">
+    <a href="https://github.com/Chet1996/pytorch-UNet"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+    <div class="container">
+      <h1 style="padding-top:15px">ChetPose</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <img id="image0" width="490" height="490" src="{% static images0 %}">
+          <form action="/process/" method="get">
+            <div style="padding-top:18px">
+              <div style="float:left">
+              <input type="text" name="path" style="height:35px;width:420px;" value="C://Users/CZiFan/Desktop/ChetPose/web/static/upload/test1.jpg">
+              </div>
+              <div>
+<!--               <input type="image" name="upload" src="/static/icon/upload.png" style="margin-left:7px;border-style:none;height:35px;width:25px">
+ -->           
+              <input type="image" name="predict" src="/static/icon/predict.png" style="margin-left:7px;border-style:none;height:35px;width:25px">
+              <input type="image" name="update" src="/static/icon/update.png" style="margin-left:7px;border-style:none;height:35px;width:25px">
+              </div>
+            </div>            
+          </form>
+
+        </div>
+        <div class='col-md-2', style="padding-left:0px">
+          <img id="image1" width="181" height="181" src="{% static images1 %}"></img>
+          <img id="image2" width="181" height="181" src="{% static images2 %}"></img>
+          <img id="image3" width="181" height="181" src="{% static images3 %}"></img>
+        </div>
+        <div class="col-md-3", style="padding-left:40px">
+        <table class="table">
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="rankle" value="0 - Right ankle", class="btn btn-default">
+          </form>  
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="rknee" value="1 - Right knee", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="rhip" value="2 - Right hip", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="lhip" value="3 - Left hip", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="lknee" value="4 - Left knee", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="lankle" value="5 - Left ankle", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="rwrist" value="6 - Right wrist", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="reblow" value="7 - Right eblow", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="rshoulder" value="8 - Right shoulder", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="lshoulder" value="9 - Left shoulder", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="leblow" value="10 - Left eblow", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="lwrist" value="11 - Left wrist", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="neck" value="12 - Neck", class="btn btn-default">
+          </form>
+          </th></tr>
+          <tr><th>
+          <form action="/change_px/" method="get">
+            <input type="submit" name="headtop" value="13 - Head top", class="btn btn-default">
+          </form>
+          </th></tr>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
